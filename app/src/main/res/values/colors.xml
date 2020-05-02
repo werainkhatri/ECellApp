@@ -2,5 +2,39 @@
 <resources>
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorAccent">#C74A4A</color>
+    <color name="colorBackground">#F8F0EE</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorRed">#FF0000</color>
+    <color name="transparent">#00000000</color>
+    <color name="colorLightBlack">#353533</color>
+    <color name="border">#FF0000FF</color>
+    <color name="es_bg_color">#282228</color>
+    <color name="associateSponsBlue">#010C54</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="bgBottomNavigation">#fe485a</color>
+    <color name="empty">#616161</color>
+    <color name="grey">#9B9FA8</color>
+    <color name="dark_grey">#92969F</color>
+
+    <!--ABOUTUS SECTION BELOW-->
+    <color name="aboutUsHeading">#414141</color>
+    <color name="aboutusText">#EFEFEF</color>
+    <color name="aboutusBg">#D9F5FF</color>
+    <color name="aboutusToolbarBg">#5AB1D8</color>
+    <color name="aboutusCardBg">#4DA7CF</color>
+    <color name="colorHamAlertCardBackground">#2f2f2f</color>
+    <color name="black">#000</color>
+
+    <color name="blue">#3498DB</color>
+    <color name="light_blue">#85C1E9</color>
+    <color name="green">#1D8348</color>
+    <color name="forgot_button">#ff68a2</color>
+    <color name="linkedin_background">#0177B5</color>
+    <color name="change_pass_button">#ff3ea7</color>
+    <color name="dirt_blue">#416A87</color>
+    <color name="dark_blue">#5275A1</color>
+
+    <color name="link">#7AA3CF</color>
+    <color name="tint">#A7A7A7</color>
 </resources>

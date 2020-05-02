@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#04202c"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".fragments.SpeakerFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/detail_speaker_image_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <ImageView
+        android:id="@+id/detail_speaker_image_gb"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/rect_evergreen"
+        app:layout_constraintBottom_toTopOf="@id/detail_speaker_image_bg_guide"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/speaker_detail_back"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toTopOf="@id/detail_speaker_image_bg_guide"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.18"
+        app:srcCompat="@drawable/ic_back" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:src="@drawable/circle_pine"
+        app:layout_constraintBottom_toTopOf="@id/detail_speaker_image_bg_guide"
+        app:layout_constraintEnd_toEndOf="@id/detail_speaker_image"
+        app:layout_constraintStart_toStartOf="@id/detail_speaker_image"
+        app:layout_constraintTop_toBottomOf="@id/detail_speaker_image_guide" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/detail_speaker_image_bg_guide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.21" />
+
+    <ImageView
+        android:id="@+id/detail_speaker_image"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="6dp"
+        app:layout_constraintBottom_toTopOf="@id/detail_speaker_guide"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detail_speaker_image_guide" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/detail_speaker_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.37" />
+
+    <LinearLayout
+        android:id="@+id/speaker_work_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/detail_speaker_guide"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/detail_speaker_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@color/tint"
+            android:textSize="35sp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layout_margin="5dp"
+            android:layout_gravity="center"
+            android:text="Speaker Name"/>
+
+        <TextView
+            android:id="@+id/speaker_company"
+            style="@style/ESummitSpeakerDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Work Profile"
+            android:layout_margin="5dp"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textColor="@color/tint" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/speaker_social_media"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/roboto"
+            android:text="Follow"
+            android:textAppearance="@style/Widget.MaterialComponents.Button"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp"
+            app:cornerRadius="30dp"
+            app:rippleColor="#5d65ff" />
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:overScrollMode="never"
+        app:layout_constraintTop_toBottomOf="@id/speaker_work_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/speaker_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autoSizeTextType="uniform"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:textSize="16sp"
+                android:textColor="@color/colorWhite"
+                app:layout_constraintTop_toBottomOf="@id/speaker_work_profile" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

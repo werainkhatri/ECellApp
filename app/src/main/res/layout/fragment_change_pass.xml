@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/email_frag_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFf"
+    tools:context=".fragments.forgotPassword.ChangePasswordFragment"
+    android:elevation="2dp"
+    tools:targetApi="lollipop">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@id/forgot_guide"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_key_design" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/forgot_guide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.32" />
+
+    <TextView
+        android:id="@+id/forgot_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bebasneueregular"
+        android:text="Set New Password"
+        android:textAlignment="center"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/forgot_guide" />
+
+    <TextView
+        android:id="@+id/forgot_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:text="Enter a New Password for your\nE-Cell account"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/forgot_edit_guide"
+        app:layout_constraintTop_toBottomOf="@id/forgot_title" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/forgot_edit_guide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.55" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/forgot_button_guide"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/forgot_edit_guide">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/new_pass_layout"
+            style="@style/ForgotTextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:passwordToggleDrawable="@drawable/login_password_eye"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/new_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="New Password"
+                android:inputType="textPassword"
+                android:paddingStart="25dp"
+                android:paddingTop="15dp"
+                android:paddingEnd="25dp"
+                android:paddingBottom="15dp"
+                android:singleLine="true"
+                android:imeOptions="actionNext"
+                android:nextFocusDown="@id/confirm_pass"
+                android:textSize="20sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/confirm_pass_layout"
+            style="@style/ForgotTextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeColor="@color/forgot_button"
+            app:passwordToggleDrawable="@drawable/login_password_eye"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/confirm_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:paddingStart="25dp"
+                android:paddingTop="15dp"
+                android:paddingEnd="25dp"
+                android:paddingBottom="15dp"
+                android:textSize="20sp"
+                android:singleLine="true"
+                android:imeOptions="actionDone"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/forgot_button_guide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/change_reset"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/merriweather_sans_light"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:text="Reset Password"
+        android:textAppearance="@style/Widget.MaterialComponents.Button"
+        android:textColor="@color/colorWhite"
+        android:textSize="30sp"
+        app:cornerRadius="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/forgot_button_guide"
+        app:rippleColor="#5d65ff" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

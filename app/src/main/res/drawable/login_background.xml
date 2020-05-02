@@ -1,0 +1,18 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:top="-45dp"
+        android:bottom="40dp"
+        android:left="-18dp"
+        android:right="1dp"
+        android:drawable="@drawable/login_circle_left"/>
+
+    <item
+        android:top="47dp"
+        android:left="40dp"
+        android:right="-25dp"
+        android:bottom="-12dp"
+        android:drawable="@drawable/login_circle_right"/>
+
+</layer-list>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/text_spons"
+        android:layout_marginBottom="5dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/img_text_background">
+
+        <TextView
+            android:id="@+id/_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/text_spons"
+            android:textAllCaps="true"
+            android:textAlignment="center"
+            android:ellipsize="end"
+            android:textColor="@color/colorWhite"
+            android:maxLines="3"
+            android:textSize="24sp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/border_white">
+
+            <TextView
+                android:id="@+id/_website"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/visit_website"
+                android:textColor="@color/colorWhite"
+                android:textAlignment="center"
+                android:padding="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
